@@ -28,11 +28,34 @@ PyTorch는 설치가 다른 프로그램들에 비해 설치가 간단하며 학
 
 터미널 창을 실행 시킨 후 아래의 코드를 입력해주셔야 됩니다.
 
+>source ~/.bashrc
+
+실행하였을때에 (base) 라는 코드가 앞에 보이면 그대로 진행하시면 됩니다. 
+
+위 코드는 아나콘다의 실행환경을 구성하는 명령어입니다.
+
+>vi ~/.bashrc
+
+아나콘다를 사용할 수 있는 환경을 위 명령어를 통해 들어가줍니다.
+
+만약 편집기가 실행이 되지 않으신다면 아래 코드로 편집기를 실행해줍니다.
+
+>sudo apt install vim
+
+편집기로 들어가셔서 가장 아래 코드부분 밑에 
+>export PATH="/home/username/anaconda3/bin:$PATH"
+
+위 내용을 입력하신후에 "ESC"키를 눌러 아래에 " : " 표시가 보일때 wq를 눌러 저장해줍니다.
+
 >conda create -n pytorch python=3.7
 
-pytorch를 anaconda에서 실행을 시켜줍니다.
+위 파이썬 버전은 본인이 쓰시는 버전을 사용하시면 됩니다.
+
+pytorch를 anaconda에서 실행을 시켜줍니다. 명령어가 쭉 나오면서 설치를 진행합니다.
 
 >conda activate pytorch
+
+>pip install torch torchvision
 
 만약 위 두가지를 설치하는 도중에 오류가 발생하면 파이썬이나 우분투OS파일에 문제가 있음으로, OS를 재설치하거나 처음부터 다시 설정을 하는 것을 권장드립니다.
 
